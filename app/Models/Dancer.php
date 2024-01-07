@@ -19,6 +19,14 @@ class Dancer extends Model
         return $this->hasMany(Style::class);
     }
 
+
+    public function style()
+    {
+        return $this->belongsTo(Style::class);
+    }
+
+
+
     public static function list()
     {
         $dancer =Dancer::orderByRaw('full_name')->get();

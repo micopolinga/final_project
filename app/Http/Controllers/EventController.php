@@ -17,7 +17,7 @@ class EventController extends Controller
     public function create()
     {
         $style = Style::list();
-        return view('event/create', ['style' => $style]);
+        return view('event.create', ['style' => $style]);
     }
 
     public function store(Request $request){
